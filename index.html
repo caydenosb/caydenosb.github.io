@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cayden Osborne | Student Portfolio</title>
+  <title>Student Portfolio</title>
   <style>
+    /* ----------- RESET & BASE ----------- */
     * {
       margin: 0;
       padding: 0;
@@ -13,18 +14,25 @@
     }
 
     body {
-      background-color: #f9fafb;
+      background-color: #f8fafc;
       color: #1f2937;
       line-height: 1.6;
     }
 
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* ----------- HEADER ----------- */
     header {
       background-color: #2563eb;
-      color: white;
+      color: #fff;
       padding: 1rem 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
 
     header h1 {
@@ -33,17 +41,16 @@
     }
 
     nav a {
-      color: white;
-      margin-left: 1rem;
-      text-decoration: none;
+      margin-left: 1.25rem;
       font-weight: 500;
-      transition: opacity 0.2s;
+      transition: opacity 0.2s ease;
     }
 
     nav a:hover {
       opacity: 0.8;
     }
 
+    /* ----------- HERO SECTION ----------- */
     .hero {
       text-align: center;
       padding: 5rem 2rem;
@@ -59,22 +66,46 @@
     .hero p {
       font-size: 1.1rem;
       opacity: 0.9;
-      margin-bottom: 2rem;
+      max-width: 700px;
+      margin: 0 auto 2rem;
     }
 
+    .button {
+      display: inline-block;
+      background: white;
+      color: #2563eb;
+      padding: 0.8rem 1.5rem;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #e0e7ff;
+    }
+
+    /* ----------- SECTION ----------- */
     section {
-      padding: 3rem 2rem;
+      padding: 4rem 2rem;
       max-width: 1000px;
       margin: auto;
     }
 
-    h3 {
+    section h3 {
       text-align: center;
-      margin-bottom: 1.5rem;
       font-size: 1.8rem;
+      margin-bottom: 2rem;
       color: #111827;
     }
 
+    section p {
+      text-align: center;
+      max-width: 800px;
+      margin: auto;
+      opacity: 0.9;
+    }
+
+    /* ----------- CARD LAYOUT ----------- */
     .card-container {
       display: flex;
       flex-wrap: wrap;
@@ -91,6 +122,7 @@
       flex: 1 1 250px;
       max-width: 300px;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
+      text-align: left;
     }
 
     .card:hover {
@@ -98,6 +130,17 @@
       box-shadow: 0 4px 15px rgba(0,0,0,0.12);
     }
 
+    .card h4 {
+      color: #2563eb;
+      margin-bottom: 0.5rem;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      opacity: 0.8;
+    }
+
+    /* ----------- FOOTER ----------- */
     footer {
       background: #111827;
       color: #9ca3af;
@@ -107,9 +150,89 @@
       font-size: 0.9rem;
     }
 
-    .button {
-      display: inline-block;
-      background: #2563eb;
-      color: white;
-      padding: 0.75rem 1.25rem;
+    @media (max-width: 600px) {
+      .hero h2 {
+        font-size: 2rem;
+      }
 
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      nav {
+        margin-top: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>Your Name</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#resume">Resume</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h2>Student Portfolio</h2>
+    <p>A clean, modern website to showcase your academic journey, projects, and achievements.</p>
+    <a href="#projects" class="button">Explore My Work</a>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <h3>About Me</h3>
+    <p>Write a short introduction here — who you are, what you study, and what you’re passionate about. 
+       This section is perfect for giving visitors an overview of your academic interests and goals.</p>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <h3>Projects</h3>
+    <div class="card-container">
+      <div class="card">
+        <h4>Project Title</h4>
+        <p>Brief description of what the project is about and what you worked on or learned.</p>
+      </div>
+      <div class="card">
+        <h4>Project Title</h4>
+        <p>Another project summary — could be research, coursework, or a programming assignment.</p>
+      </div>
+      <div class="card">
+        <h4>Project Title</h4>
+        <p>Add as many cards as you like. Each one can link to a repo, PDF, or presentation.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESUME -->
+  <section id="resume">
+    <h3>Resume</h3>
+    <p>You can upload your resume as a PDF in this GitHub repository and link it here:</p>
+    <a href="resume.pdf" class="button" download>Download My Resume (PDF)</a>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h3>Contact</h3>
+    <p>Add your email, LinkedIn, or GitHub here so people can connect with you:</p>
+    <p>
+      📧 <a href="mailto:your.email@example.com">your.email@example.com</a><br>
+      🔗 <a href="#" target="_blank">LinkedIn</a> | <a href="#" target="_blank">GitHub</a>
+    </p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 Your Name — Student Portfolio
+  </footer>
+
+</body>
+</html>
