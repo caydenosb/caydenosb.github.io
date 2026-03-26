@@ -2,238 +2,307 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Student Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cayden Osborne</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
-    /* ----------- RESET & BASE ----------- */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      background-color: #f8fafc;
-      color: #1f2937;
+      font-family: 'Inter', sans-serif;
+      background: #fff;
+      color: #1c1c1c;
+      min-height: 100vh;
+    }
+
+    /* ── TOP NAV ── */
+    nav {
+      border-bottom: 1px solid #ebebeb;
+      padding: 0 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 56px;
+    }
+
+    .nav-name {
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 0.25rem;
+    }
+
+    .nav-link {
+      font-size: 0.82rem;
+      color: #666;
+      text-decoration: none;
+      padding: 0.4rem 0.85rem;
+      border-radius: 6px;
+      transition: background 0.15s, color 0.15s;
+      cursor: pointer;
+    }
+
+    .nav-link:hover, .nav-link.active {
+      background: #f4f4f4;
+      color: #1c1c1c;
+    }
+
+    /* ── MAIN LAYOUT ── */
+    main {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    /* ── LEFT SIDEBAR ── */
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      position: sticky;
+      top: 4rem;
+    }
+
+    .photo {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: #e8e8e8;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #aaa;
+      font-size: 0.75rem;
+      text-align: center;
+      line-height: 1.5;
+    }
+
+    .photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .sidebar-name {
+      font-size: 1rem;
+      font-weight: 500;
+      text-align: center;
+    }
+
+    .sidebar-sub {
+      font-size: 0.78rem;
+      color: #888;
+      text-align: center;
       line-height: 1.6;
     }
 
-    a {
-      color: inherit;
+    .sidebar-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 0.25rem;
+    }
+
+    .sidebar-link {
+      font-size: 0.75rem;
+      color: #555;
       text-decoration: none;
     }
 
-    /* ----------- HEADER ----------- */
-    header {
-      background-color: #111111;
-      color: #fff;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    .sidebar-link:hover { text-decoration: underline; }
+
+    /* ── CONTENT ── */
+    .content section {
+      display: none;
     }
 
-    header h1 {
-      font-size: 1.5rem;
-      letter-spacing: 0.5px;
+    .content section.active {
+      display: block;
     }
 
-    nav a {
-      margin-left: 1.25rem;
+    h2 {
+      font-size: 1rem;
       font-weight: 500;
-      transition: opacity 0.2s ease;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid #ebebeb;
     }
 
-    nav a:hover {
-      opacity: 0.8;
-    }
-
-    /* ----------- HERO SECTION ----------- */
-    .hero {
-      text-align: center;
-      padding: 5rem 2rem;
-      background: linear-gradient(135deg, #000000, #222222);
-      color: white;
-    }
-
-    .hero h2 {
-      font-size: 2.5rem;
+    p {
+      font-size: 0.92rem;
+      color: #444;
+      line-height: 1.85;
+      font-weight: 300;
       margin-bottom: 1rem;
     }
 
-    .hero p {
-      font-size: 1.1rem;
-      opacity: 0.9;
-      max-width: 700px;
-      margin: 0 auto 2rem;
+    /* research entries */
+    .entry {
+      margin-bottom: 1.5rem;
     }
 
-    .button {
-      display: inline-block;
-      background: white;
-      color: #ffffff;
-      padding: 0.8rem 1.5rem;
-      border-radius: 0.5rem;
-      font-weight: 600;
-      transition: background 0.3s ease;
-    }
-
-    .button:hover {
-      background-color: #333333;
-    }
-
-    /* ----------- SECTION ----------- */
-    section {
-      padding: 4rem 2rem;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    section h3 {
-      text-align: center;
-      font-size: 1.8rem;
-      margin-bottom: 2rem;
-      color: #000000;
-    }
-
-    section p {
-      text-align: center;
-      max-width: 800px;
-      margin: auto;
-      opacity: 0.9;
-    }
-
-    /* ----------- CARD LAYOUT ----------- */
-    .card-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-      justify-content: center;
-      margin-top: 2rem;
-    }
-
-    .card {
-      background: white;
-      border-radius: 0.75rem;
-      padding: 1.5rem;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-      flex: 1 1 250px;
-      max-width: 300px;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      text-align: left;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 4px 15px rgba(0,0,0,0.12);
-    }
-
-    .card h4 {
-      color: #2563eb;
-      margin-bottom: 0.5rem;
-    }
-
-    .card p {
-      font-size: 0.95rem;
-      opacity: 0.8;
-    }
-
-    /* ----------- FOOTER ----------- */
-    footer {
-      background: #111827;
-      color: #9ca3af;
-      text-align: center;
-      padding: 1.5rem 0;
-      margin-top: 3rem;
+    .entry-title {
       font-size: 0.9rem;
+      font-weight: 500;
+      margin-bottom: 0.2rem;
     }
 
+    .entry-meta {
+      font-size: 0.78rem;
+      color: #999;
+      margin-bottom: 0.4rem;
+    }
+
+    .entry-desc {
+      font-size: 0.85rem;
+      color: #555;
+      line-height: 1.75;
+      font-weight: 300;
+    }
+
+    /* CV section */
+    .cv-row {
+      display: grid;
+      grid-template-columns: 90px 1fr;
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+      font-size: 0.88rem;
+    }
+
+    .cv-year { color: #aaa; font-size: 0.8rem; padding-top: 2px; }
+    .cv-item-title { font-weight: 500; }
+    .cv-item-sub { color: #888; font-size: 0.8rem; margin-top: 0.15rem; }
+
+    /* misc */
+    .misc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .misc-list li {
+      font-size: 0.88rem;
+      color: #444;
+      font-weight: 300;
+    }
+
+    .misc-list a {
+      color: #1c1c1c;
+      text-underline-offset: 3px;
+    }
+
+    /* ── RESPONSIVE ── */
     @media (max-width: 600px) {
-      .hero h2 {
-        font-size: 2rem;
-      }
-
-      header {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      nav {
-        margin-top: 0.5rem;
-      }
+      nav { padding: 0 1.25rem; }
+      main { grid-template-columns: 1fr; gap: 2rem; padding: 2rem 1.25rem; }
+      .sidebar { flex-direction: column; }
     }
   </style>
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <h1>Cayden Osborne</h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#resume">Resume</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+  <nav>
+    <div class="nav-name">Cayden Osborne</div>
+    <div class="nav-links">
+      <a class="nav-link active" onclick="show('about', this)">About</a>
+      <a class="nav-link" onclick="show('research', this)">Research</a>
+      <a class="nav-link" onclick="show('cv', this)">CV</a>
+      <a class="nav-link" onclick="show('misc', this)">Misc</a>
+    </div>
+  </nav>
 
-  <!-- HERO -->
-  <section class="hero">
-    <h2>Hello</h2>
-    <p>Welcome to my page. Here you will find all my information and achievements </p>
-    <a href="#projects" class="button">Explore My Work</a>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about">
-    <h3>About Me</h3>
-    <p>Hi, my name is Cayden Osborne, and I am a student here at UAlbany. I am majoring in Mathematics and minoring in physics. I am enrolled in a 4+1 program. 
-      I am currently working on my Bachelor's and Master's degrees. My tentative graduation with both degrees is Fall 2027. For those wondering, some of my mathematical interests are non-Euclidean Geometry,
-    Topology and Number Theory</p>
-  </section>
-
-  <!-- PROJECTS -->
-  <section id="projects">
-    <h3>Projects</h3>
-    <div class="card-container">
-      <div class="card">
-        <h4>Project Title</h4>
-        <p>Brief description of what the project is about and what you worked on or learned.</p>
-      </div>
-      <div class="card">
-        <h4>Project Title</h4>
-        <p>Another project summary — could be research, coursework, or a programming assignment.</p>
-      </div>
-      <div class="card">
-        <h4>Project Title</h4>
-        <p>Add as many cards as you like. Each one can link to a repo, PDF, or presentation.</p>
+  <main>
+    <div class="sidebar">
+      <!-- Replace the src with your actual photo path -->
+      <div class="photo">Your photo here</div>
+      <div class="sidebar-name">Your Name</div>
+      <div class="sidebar-sub">Math student<br>University at Albany, SUNY</div>
+      <div class="sidebar-links">
+        <a href="mailto:cjosborne@albany.edu" class="sidebar-link">Email</a>
+        <a href="https://github.com/caydenosb" class="sidebar-link">GitHub</a>
       </div>
     </div>
-  </section>
 
-  <!-- RESUME -->
-  <section id="resume">
-    <h3>Resume</h3>
-    <p>You can upload your resume as a PDF in this GitHub repository and link it here:</p>
-    <a href="resume.pdf" class="button" download>Download My Resume (PDF)</a>
-  </section>
+    <div class="content">
 
-  <!-- CONTACT -->
-  <section id="contact">
-    <h3>Contact</h3>
-    <p>Add your email, LinkedIn, or GitHub here so people can connect with you:</p>
-    <p>
-      📧 <a href="mailto:your.email@example.com">your.email@example.com</a><br>
-      🔗 <a href="#" target="_blank">LinkedIn</a> | <a href="#" target="_blank">GitHub</a>
-    </p>
-  </section>
+      <section id="about" class="active">
+        <h2>About</h2>
+        <p>
+          Hi there, I am an undergraduate student studying mathematics at the [University at Albany, SUNY]. 
+          I'm interested in [Number Theory, Algebra, and Topology].
+        </p>
+        <p>
+          I'm currently enrolled in a dual program, taking undergraduate and graduate classes at the same time. I plan to earn my B.S. in Mathematics in the fall of 2026, and then my M.A. in the Spring of 2027.
+        </p>
+        <p>
+          Outside of math, I enjoy [walking, nature, listening to music]. 
+        </p>
+      </section>
 
-  <!-- FOOTER -->
-  <footer>
-    © 2025 Your Name — Student Portfolio
-  </footer>
+      <section id="research">
+        <h2>Research</h2>
+        <div class="entry">
+          <div class="entry-title">Project or Paper Title</div>
+          <div class="entry-meta">Advisor: Prof. Name · Spring 2025</div>
+          <div class="entry-desc">A short description of what the project is about and what you explored or found.</div>
+        </div>
+        <div class="entry">
+          <div class="entry-title">Another Project</div>
+          <div class="entry-meta">Course project · Fall 2024</div>
+          <div class="entry-desc">Description of the work, methods used, and any interesting results or takeaways.</div>
+        </div>
+      </section>
+
+      <section id="cv">
+        <h2>CV</h2>
+        <p style="margin-bottom:1.5rem;">
+          <a href="cv.pdf" style="font-size:0.85rem; color:#1c1c1c;">Download full CV (PDF) ↗</a>
+        </p>
+        <div class="cv-row">
+          <div class="cv-year">2022 –</div>
+          <div><div class="cv-item-title">B.S. Mathematics</div><div class="cv-item-sub">Your University</div></div>
+        </div>
+        <div class="cv-row">
+          <div class="cv-year">2025</div>
+          <div><div class="cv-item-title">Real Analysis, Topology, Abstract Algebra</div><div class="cv-item-sub">Relevant coursework</div></div>
+        </div>
+        <div class="cv-row">
+          <div class="cv-year">2024</div>
+          <div><div class="cv-item-title">Math Department Award</div><div class="cv-item-sub">Or any honor / scholarship</div></div>
+        </div>
+      </section>
+
+      <section id="misc">
+        <h2>Miscellaneous</h2>
+        <p>Some other things worth sharing:</p>
+        <ul class="misc-list">
+          <li>📖 Currently reading: <em>Book title</em></li>
+          <li>🎵 Lately listening to: Artist or album</li>
+          <li>✏️ <a href="#">Notes on a topic I find interesting</a></li>
+          <li>🔗 <a href="#">A link I think is worth sharing</a></li>
+        </ul>
+      </section>
+
+    </div>
+  </main>
+
+  <script>
+    function show(id, el) {
+      document.querySelectorAll('.content section').forEach(s => s.classList.remove('active'));
+      document.querySelectorAll('.nav-link').forEach(a => a.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+      el.classList.add('active');
+    }
+  </script>
 
 </body>
 </html>
