@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Cayden Osborne</title>
+  <title>Cayden Osborne fonts-size: 22px</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <script src="script.js"></script>
   <style>
+
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      font-family: 'Inter', sans-serif;
-      background: #fff;
-      color: #1c1c1c;
+      font-family: "Didot", "Bondoni MT", "Times New Roman", serif;
+      padding: 0;
+      margin:0;
+      font-size: 20px;
+      background: rgb(42, 42, 42);
+      color: white;
       min-height: 100vh;
     }
 
@@ -23,10 +29,11 @@
       align-items: center;
       justify-content: space-between;
       height: 56px;
+  
     }
 
     .nav-name {
-      font-size: 0.95rem;
+      font-size: larger;
       font-weight: 500;
     }
 
@@ -36,8 +43,8 @@
     }
 
     .nav-link {
-      font-size: 0.82rem;
-      color: #666;
+      font-size: larger;
+      color: white;
       text-decoration: none;
       padding: 0.4rem 0.85rem;
       border-radius: 6px;
@@ -52,7 +59,7 @@
 
     /* ── MAIN LAYOUT ── */
     main {
-      max-width: 860px;
+      max-width: 1150px;
       margin: 0 auto;
       padding: 4rem 2rem;
       display: grid;
@@ -62,14 +69,32 @@
     }
 
     /* ── LEFT SIDEBAR ── */
-    .sidebar {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1rem;
-      position: sticky;
-      top: 4rem;
-    }
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+
+  position: sticky;
+  top: 4rem;
+
+  border: 1px solid #444;
+  border-radius: 18px;
+  padding: 1.5rem 1rem;
+  background: rgb(42, 42, 42);
+}
+
+.sidebar a,
+.content a {
+  color: #b8d8ff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.sidebar a:hover,
+.content a:hover {
+  color: white;
+}
 
     .photo {
       width: 160px;
@@ -100,7 +125,7 @@
 
     .sidebar-sub {
       font-size: 0.78rem;
-      color: #888;
+      color: white;
       text-align: center;
       line-height: 1.6;
     }
@@ -113,7 +138,7 @@
 
     .sidebar-link {
       font-size: 0.75rem;
-      color: #555;
+      color: white;
       text-decoration: none;
     }
 
@@ -138,7 +163,7 @@
 
     p {
       font-size: 0.92rem;
-      color: #444;
+      color: hsl(0, 0%, 100%);
       line-height: 1.85;
       font-weight: 300;
       margin-bottom: 1rem;
@@ -163,7 +188,7 @@
 
     .entry-desc {
       font-size: 0.85rem;
-      color: #555;
+      color: hsl(0, 0%, 100%);
       line-height: 1.75;
       font-weight: 300;
     }
@@ -177,9 +202,9 @@
       font-size: 0.88rem;
     }
 
-    .cv-year { color: #aaa; font-size: 0.8rem; padding-top: 2px; }
+    .cv-year { color: #fffdfd; font-size: 0.8rem; padding-top: 2px; }
     .cv-item-title { font-weight: 500; }
-    .cv-item-sub { color: #888; font-size: 0.8rem; margin-top: 0.15rem; }
+    .cv-item-sub { color: #fffcfc; font-size: 0.8rem; margin-top: 0.15rem; }
 
     /* misc */
     .misc-list {
@@ -191,7 +216,7 @@
 
     .misc-list li {
       font-size: 0.88rem;
-      color: #444;
+      color: #fdfdfd;
       font-weight: 300;
     }
 
@@ -214,7 +239,7 @@
     <div class="nav-name">Cayden J. Osborne</div>
     <div class="nav-links">
       <a class="nav-link active" onclick="show('about', this)">About</a>
-      <a class="nav-link" onclick="show('research', this)">Research</a>
+      <a class="nav-link" onclick="show('research', this)">Research/Projects</a>
       <a class="nav-link" onclick="show('cv', this)">CV</a>
       <a class="nav-link" onclick="show('misc', this)">Misc</a>
     </div>
@@ -242,7 +267,7 @@
           I'm interested in Algebraic Number Theory, Geometric Group Theory, and Algebra.
         </p>
         <p>
-          I'm currently enrolled in a dual-degree program. So I am taking undergraduate and graduate classes at the same time. I plan to earn my B.S. in Mathematics with a Physics minor in Fall 2026, then my M.A. in Spring 2027. I am currently working on a master's thesis under the supervision of Dr. Matthew Zaremsky, focusing on the finiteness properties of groups.
+          I'm currently enrolled in a dual-degree program. So I am taking undergraduate and graduate classes at the same time. I plan to earn my B.S. in Mathematics with a Physics minor in Fall 2026, then my M.A. in Spring 2027. I am currently working on a master's thesis under the supervision of <a href="https://zaremsky.github.io/" target="_blank">Dr. Matthew Zaremsky</a>, focusing on the finiteness properties of groups.
         </p>
         <p>
           Outside of math, I enjoy walking, spending time in nature, and listening to music. 
@@ -255,7 +280,7 @@
         <h2>Research and Projects</h2>
         <div class="entry">
          <div class="entry-title">
-  <a href="Applications to Div Thm.pdf" target="_blank" style="color:#1c1c1c; text-decoration:none;"> Applications of the Divergence Theorem to Gravitational Fields </a> </div>
+  <a href="Applications to Div Thm.pdf" target="_blank" style="color:#fffefe; text-decoration:none;"> Applications of the Divergence Theorem to Gravitational Fields </a> </div>
           <div class="entry-meta">Final Project Fall 2025 </div>
           <div class="entry-desc">I used the divergence theorem to prove the Newton Shell theorem, and then used the results to calculate the gravity on a habitable planet like Earth, namely Kepler-452b.</div>
         </div>
@@ -269,7 +294,7 @@
       <section id="cv">
         <h2>CV</h2>
         <p style="margin-bottom:1.5rem;">
-          <a href="CV.pdf" style="font-size:0.85rem; color:#1c1c1c;">Download full CV (PDF) ↗</a>
+          <a href="CV.pdf" style="font-size:0.85rem; color:#fffcfc;">Download full CV (PDF) ↗</a>
         </p>
         <div class="cv-row">
           <div class="cv-year">2025 – Present</div>
