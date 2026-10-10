@@ -4,16 +4,11 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
     <title>Cayden J. Osborne</title>
 
-
-    <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Roboto+Slab:wght@400;700&display=swap"
-    >
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Roboto+Slab:wght@400;700&display=swap">
 
     <script>
         window.MathJax = {
@@ -24,43 +19,9 @@
         };
     </script>
 
-    <script
-        defer
-        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
-    </script>
-.favorite-theorem {
-    max-width: 750px;
-    margin: 50px auto 30px;
-    padding: 25px;
-    text-align: center;
-}
+    <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 
-.favorite-theorem h2 {
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 20px;
-}
-
-.favorite-theorem h3 {
-    font-size: 1.4rem;
-    margin-bottom: 20px;
-}
-
-.favorite-theorem p {
-    font-size: 1rem;
-    line-height: 1.8;
-    margin-bottom: 20px;
-}
-
-.theorem-equation {
-    font-size: 1.4rem;
-    margin: 30px auto;
-    overflow-x: auto;
-}
     <style>
-
- 
-
         :root {
             --bg: #000;
             --ink: #e6e6e6;
@@ -68,13 +29,10 @@
             --line: #2a2a2a;
             --acc: #2698ba;
             --soft: #141414;
-
             --sans: "Roboto", "Helvetica Neue", Arial, sans-serif;
             --slab: "Roboto Slab", Georgia, serif;
-
             color-scheme: dark;
             box-sizing: border-box;
-
             padding-top: env(safe-area-inset-top, 0px);
             padding-bottom: env(safe-area-inset-bottom, 0px);
         }
@@ -86,16 +44,11 @@
             --line: #ddd;
             --acc: #b509ac;
             --soft: #f4f4f4;
-
             color-scheme: light;
         }
 
-
-
-
         html {
-            scroll-padding-top:
-                calc(env(safe-area-inset-top, 0px) + 4rem);
+            scroll-padding-top: calc(env(safe-area-inset-top, 0px) + 4rem);
         }
 
         *,
@@ -131,9 +84,6 @@
             padding: 0 1.25rem;
         }
 
-
-      
-
         header {
             position: sticky;
             top: env(safe-area-inset-top, 0px);
@@ -166,9 +116,6 @@
             padding-bottom: 2px;
         }
 
-
-        
-
         #theme {
             background: none;
             border: 0;
@@ -181,8 +128,6 @@
         #theme:hover {
             color: var(--ink);
         }
-
-
 
         main {
             padding: 2.5rem 0 4rem;
@@ -206,9 +151,6 @@
             color: var(--mute);
             margin: 0 0 1.5rem;
         }
-
-
-        
 
         .profile {
             float: right;
@@ -245,8 +187,6 @@
             font-size: .95rem;
         }
 
-
-
         .links a {
             margin-right: .15rem;
         }
@@ -255,8 +195,6 @@
             color: var(--mute);
         }
 
-
-
         ol {
             padding-left: 1.4rem;
         }
@@ -264,7 +202,6 @@
         li {
             margin-bottom: .35rem;
         }
-
 
         .year {
             font: 700 1.5rem var(--slab);
@@ -293,7 +230,6 @@
             font-weight: 500;
         }
 
-
         .btn {
             display: inline-block;
             border: 1px solid var(--acc);
@@ -310,9 +246,6 @@
             color: var(--bg);
             text-decoration: none;
         }
-
-
- 
 
         .math-gallery {
             display: grid;
@@ -342,13 +275,40 @@
             margin-top: .75rem;
         }
 
+        .favorite-theorem {
+            max-width: 750px;
+            margin: 50px auto 30px;
+            padding: 25px;
+            text-align: center;
+            clear: both;
+        }
 
+        .favorite-theorem h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .favorite-theorem h3 {
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+        }
+
+        .favorite-theorem p {
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .theorem-equation {
+            font-size: 1.4rem;
+            margin: 30px auto;
+            overflow-x: auto;
+        }
 
         [hidden] {
             display: none !important;
         }
-
-
 
         footer {
             border-top: 1px solid var(--line);
@@ -357,10 +317,7 @@
             font-size: .9rem;
         }
 
-
-       
         @media (max-width: 700px) {
-
             .profile {
                 float: none;
                 width: 11rem;
@@ -380,71 +337,54 @@
                 max-height: 170px;
             }
 
-        }
+            .favorite-theorem {
+                padding: 15px 0;
+            }
 
+            .favorite-theorem h2 {
+                font-size: 1.6rem;
+            }
+
+            .theorem-equation {
+                font-size: 1.1rem;
+            }
+        }
     </style>
 </head>
 
-
 <body>
-
-    
 
     <header>
         <div class="wrap">
-
-            <a class="tab"
-               href="#about"
-               data-p="about">
+            <a class="tab" href="#about" data-p="about">
                 about
             </a>
 
-            <a class="tab"
-               href="#research"
-               data-p="research">
+            <a class="tab" href="#research" data-p="research">
                 research
             </a>
 
-            <button
-                id="theme"
-                type="button"
-                aria-label="Switch color theme">
+            <button id="theme" type="button" aria-label="Switch color theme">
                 ☾
             </button>
-
         </div>
     </header>
 
-
     <main class="wrap">
-
-
 
         <section id="about">
 
-
             <aside class="profile">
-
-
                 <div class="photo">
-
                     <img
                         src="profile.JPG"
                         alt="Cayden J. Osborne"
                         onerror="this.remove(); this.parentElement.textContent='C';"
                     >
-
                 </div>
 
-
-                
-
                 <address>
-
-                    <a
-                        href="https://www.albany.edu/math"
-                        target="_blank"
-                        rel="noopener noreferrer">
+                    <a href="https://www.albany.edu/math" target="_blank" rel="noopener noreferrer">
                         University at Albany, SUNY
                     </a><br>
 
@@ -453,79 +393,44 @@
                     <a href="mailto:cjosborne@albany.edu">
                         cjosborne@albany.edu
                     </a>
-
                 </address>
-
             </aside>
-
 
             <h1>
                 <b>Cayden J. Osborne</b>
             </h1>
 
             <p class="sub">
-
-                <a
-                    href="https://www.albany.edu/math"
-                    target="_blank"
-                    rel="noopener noreferrer">
+                <a href="https://www.albany.edu/math" target="_blank" rel="noopener noreferrer">
                     University at Albany, SUNY
                 </a>
-
             </p>
-
-
-            
 
             <p class="links">
-
-                <a href="CV.pdf" target="_blank">
-                    CV
-                </a>
-
+                <a href="CV.pdf" target="_blank">CV</a>
                 <span>|</span>
 
-                <a
-                    href="https://www.linkedin.com/in/cjosborne7/"
-                    target="_blank"
-                    rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/in/cjosborne7/" target="_blank" rel="noopener noreferrer">
                     LinkedIn
                 </a>
-
                 <span>|</span>
 
-                <a
-                    href="https://github.com/caydenosb"
-                    target="_blank"
-                    rel="noopener noreferrer">
+                <a href="https://github.com/caydenosb" target="_blank" rel="noopener noreferrer">
                     GitHub
                 </a>
-
             </p>
-
-
-      
 
             <p>
                 Welcome! I am currently a mathematics student at
-
-                <a
-                    href="https://www.albany.edu/math"
-                    target="_blank"
-                    rel="noopener noreferrer">
+                <a href="https://www.albany.edu/math" target="_blank" rel="noopener noreferrer">
                     University at Albany, SUNY
                 </a>,
-
                 pursuing a combined B.S./M.A. in Mathematics,
                 with an expected completion of May 2027.
 
                 I am currently working on my master's thesis
                 and independent study under the supervision of
-
-                <a
-                    href="https://zaremsky.github.io/index.html"
-                    target="_blank"
-                    rel="noopener noreferrer">
+                <a href="https://zaremsky.github.io/index.html" target="_blank" rel="noopener noreferrer">
                     Dr. Matthew Zaremsky
                 </a>.
 
@@ -534,33 +439,16 @@
                 group \(V\) is of type \(F_\infty\).
             </p>
 
-
-
             <p>
                 My research interests currently lie in:
             </p>
 
             <ol>
-
-                <li>
-                    Geometric Group Theory;
-                </li>
-
-                <li>
-                    Algebraic Number Theory;
-                </li>
-
-                <li>
-                    Algebraic Topology;
-                </li>
-
-                <li>
-                    Anything that relates to Algebra.
-                </li>
-
+                <li>Geometric Group Theory;</li>
+                <li>Algebraic Number Theory;</li>
+                <li>Algebraic Topology;</li>
+                <li>Anything that relates to Algebra.</li>
             </ol>
-
-
 
             <p>
                 Currently, the topic of category theory
@@ -571,8 +459,6 @@
                 listening to music.
             </p>
 
-
-
             <h2>Mathematical Interests</h2>
 
             <p>
@@ -581,14 +467,9 @@
                 geometric group theory and category theory.
             </p>
 
-
-
             <div class="math-gallery">
 
-              
-
                 <figure class="math-figure">
-
                     <img
                         src="ThompTree.png"
                         alt="Tree diagram representing an element of Thompson's group V"
@@ -599,14 +480,9 @@
                         A tree diagram representing an element
                         of Thompson's group \(V\).
                     </figcaption>
-
                 </figure>
 
-
-    
-
                 <figure class="math-figure">
-
                     <img
                         src="CDiagram.png"
                         alt="Commutative diagram from category theory"
@@ -617,38 +493,38 @@
                         A diagram illustrating
                         a categorical relationship.
                     </figcaption>
-
                 </figure>
 
             </div>
-<div class="favorite-theorem">
 
-    <h2>My Favorite Theorem</h2>
+            <div class="favorite-theorem">
 
-    <h3>The Mordell–Weil Theorem</h3>
+                <h2>My Favorite Theorem</h2>
 
-    <p>
-        Let \(E\) be an elliptic curve defined over a
-        number field \(K\). Then the group of
-        \(K\)-rational points on \(E\) is finitely generated.
-    </p>
+                <h3>The Mordell–Weil Theorem</h3>
 
-    <div class="theorem-equation">
-        \[
-        E(K) \cong \mathbb{Z}^{r}
-        \oplus E(K)_{\mathrm{tors}}
-        \]
-    </div>
+                <p>
+                    Let \(E\) be an elliptic curve defined over a
+                    number field \(K\). Then the group of
+                    \(K\)-rational points on \(E\) is finitely generated.
+                </p>
 
-    <p>
-        Here, \(r\) denotes the rank of \(E(K)\),
-        and \(E(K)_{\mathrm{tors}}\) is its
-        finite torsion subgroup.
-    </p>
+                <div class="theorem-equation">
+                    \[
+                    E(K) \cong \mathbb{Z}^{r}
+                    \oplus E(K)_{\mathrm{tors}}
+                    \]
+                </div>
 
-</div>
+                <p>
+                    Here, \(r\) denotes the rank of \(E(K)\),
+                    and \(E(K)_{\mathrm{tors}}\) is its
+                    finite torsion subgroup.
+                </p>
+
+            </div>
+
         </section>
-      
 
         <section id="research" hidden>
 
@@ -658,14 +534,9 @@
                 Current research and selected mathematical projects.
             </p>
 
-
-
             <div class="year">
                 2026–2027
             </div>
-
-
-         
 
             <div class="pub">
 
@@ -691,8 +562,6 @@
 
             </div>
 
-
-
             <div class="pub">
 
                 <div class="t">
@@ -713,22 +582,16 @@
                     and future directions in neutrino research.
                 </p>
 
-                <a
-                    class="btn"
-                    href="ANeutrinos.pdf"
-                    target="_blank">
+                <a class="btn" href="ANeutrinos.pdf" target="_blank">
                     PDF
                 </a>
 
             </div>
 
-
             <div class="year">
                 2025
             </div>
 
-
-           
             <div class="pub">
 
                 <div class="t">
@@ -746,22 +609,15 @@
                     and investigate gravitational fields.
                 </p>
 
-                <a
-                    class="btn"
-                    href="DivergenceTheorem.pdf"
-                    target="_blank">
+                <a class="btn" href="DivergenceTheorem.pdf" target="_blank">
                     PDF
                 </a>
 
             </div>
 
         </section>
-        
 
     </main>
-
-
-  
 
     <footer>
         <div class="wrap">
@@ -769,45 +625,29 @@
         </div>
     </footer>
 
-
- 
     <script>
-
         (function () {
-
-            
-
             var root = document.documentElement;
             var btn = document.getElementById('theme');
 
             function icon() {
-
                 btn.textContent =
                     root.getAttribute('data-theme') === 'light'
                         ? '☀'
                         : '☾';
-
             }
 
-
- 
-
             try {
-
                 var s = localStorage.getItem('theme');
 
                 if (s) {
                     root.setAttribute('data-theme', s);
                 }
-
             } catch (e) {}
 
             icon();
 
-
-        
             btn.addEventListener('click', function () {
-
                 var n =
                     root.getAttribute('data-theme') === 'light'
                         ? 'dark'
@@ -820,14 +660,11 @@
                 } catch (e) {}
 
                 icon();
-
             });
-
 
             var tabs = document.querySelectorAll('.tab');
 
             function show() {
-
                 var p =
                     location.hash === '#research'
                         ? 'research'
@@ -839,36 +676,21 @@
                 document.getElementById('research').hidden =
                     p !== 'research';
 
-
-         
-
                 tabs.forEach(function (t) {
-
                     if (t.dataset.p === p) {
-
-                        t.setAttribute(
-                            'aria-current',
-                            'page'
-                        );
-
+                        t.setAttribute('aria-current', 'page');
                     } else {
-
                         t.removeAttribute('aria-current');
-
                     }
-
                 });
 
                 window.scrollTo(0, 0);
-
             }
 
             addEventListener('hashchange', show);
 
             show();
-
         })();
-
     </script>
 
 </body>
