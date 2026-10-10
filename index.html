@@ -28,7 +28,35 @@
         defer
         src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
     </script>
+.favorite-theorem {
+    max-width: 750px;
+    margin: 50px auto 30px;
+    padding: 25px;
+    text-align: center;
+}
 
+.favorite-theorem h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.favorite-theorem h3 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+}
+
+.favorite-theorem p {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.theorem-equation {
+    font-size: 1.4rem;
+    margin: 30px auto;
+    overflow-x: auto;
+}
     <style>
 
  
@@ -593,7 +621,32 @@
                 </figure>
 
             </div>
+<div class="favorite-theorem">
 
+    <h2>My Favorite Theorem</h2>
+
+    <h3>The Mordell–Weil Theorem</h3>
+
+    <p>
+        Let \(E\) be an elliptic curve defined over a
+        number field \(K\). Then the group of
+        \(K\)-rational points on \(E\) is finitely generated.
+    </p>
+
+    <div class="theorem-equation">
+        \[
+        E(K) \cong \mathbb{Z}^{r}
+        \oplus E(K)_{\mathrm{tors}}
+        \]
+    </div>
+
+    <p>
+        Here, \(r\) denotes the rank of \(E(K)\),
+        and \(E(K)_{\mathrm{tors}}\) is its
+        finite torsion subgroup.
+    </p>
+
+</div>
         </section>
       
 
