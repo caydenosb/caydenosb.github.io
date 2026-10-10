@@ -7,7 +7,6 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1, viewport-fit=cover">
 
-
     <title>Cayden J. Osborne</title>
 
 
@@ -15,7 +14,6 @@
         rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Roboto+Slab:wght@400;700&display=swap"
     >
-
 
     <script>
         window.MathJax = {
@@ -31,50 +29,10 @@
         src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
     </script>
 
-
-.math-gallery {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 2rem;
-    margin-top: 1.5rem;
-}
-
-.math-figure {
-    margin: 0;
-    min-width: 0;
-    text-align: center;
-}
-
-.math-figure img {
-    width: 100%;
-    height: 220px;
-    object-fit: contain;
-}
-
-.math-figure figcaption {
-    color: var(--mute);
-    font-size: 0.85rem;
-    line-height: 1.6;
-    margin-top: 0.75rem;
-}
-
-/* STACK IMAGES ON SMALL SCREENS */
-@media (max-width: 700px) {
-
-    .math-gallery {
-        grid-template-columns: 1fr;
-    }
-
-    .math-figure img {
-        height: auto;
-        max-height: 250px;
-    }
-
-}
     <style>
 
+ 
 
-        /* DARK MODE */
         :root {
             --bg: #000;
             --ink: #e6e6e6;
@@ -93,7 +51,6 @@
             padding-bottom: env(safe-area-inset-bottom, 0px);
         }
 
-
         :root[data-theme="light"] {
             --bg: #fff;
             --ink: #111;
@@ -104,6 +61,7 @@
 
             color-scheme: light;
         }
+
 
 
 
@@ -181,7 +139,7 @@
         }
 
 
-    
+        
 
         #theme {
             background: none;
@@ -197,7 +155,6 @@
         }
 
 
-       
 
         main {
             padding: 2.5rem 0 4rem;
@@ -249,6 +206,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            display: block;
         }
 
         .profile address {
@@ -260,7 +218,6 @@
         }
 
 
-       
 
         .links a {
             margin-right: .15rem;
@@ -281,25 +238,6 @@
         }
 
 
-    
-
-        .fig {
-            margin: 1.5rem 0 2.25rem;
-            clear: both;
-        }
-
-        .fig .ph {
-            aspect-ratio: 16/7;
-            border: 1px dashed var(--line);
-            display: grid;
-            place-items: center;
-            color: var(--mute);
-            font-size: .9rem;
-            margin-top: .75rem;
-        }
-
-
-      
         .year {
             font: 700 1.5rem var(--slab);
             margin: 2.25rem 0 1rem;
@@ -328,8 +266,6 @@
         }
 
 
-     
-
         .btn {
             display: inline-block;
             border: 1px solid var(--acc);
@@ -348,15 +284,43 @@
         }
 
 
-    
+ 
+
+        .math-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+            clear: both;
+        }
+
+        .math-figure {
+            margin: 0;
+            min-width: 0;
+            text-align: center;
+        }
+
+        .math-figure img {
+            display: block;
+            width: 100%;
+            height: 160px;
+            object-fit: contain;
+        }
+
+        .math-figure figcaption {
+            color: var(--mute);
+            font-size: .85rem;
+            line-height: 1.6;
+            margin-top: .75rem;
+        }
+
+
 
         [hidden] {
             display: none !important;
         }
 
 
-       
-      
 
         footer {
             border-top: 1px solid var(--line);
@@ -366,8 +330,7 @@
         }
 
 
-      
-
+       
         @media (max-width: 700px) {
 
             .profile {
@@ -380,16 +343,24 @@
                 font-size: 2.1rem;
             }
 
+            .math-gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .math-figure img {
+                height: auto;
+                max-height: 170px;
+            }
+
         }
 
     </style>
-
 </head>
 
 
 <body>
 
- 
+    
 
     <header>
         <div class="wrap">
@@ -419,7 +390,8 @@
 
     <main class="wrap">
 
-     
+
+
         <section id="about">
 
 
@@ -429,7 +401,7 @@
                 <div class="photo">
 
                     <img
-                        src="profile.jpg"
+                        src="profile.JPG"
                         alt="Cayden J. Osborne"
                         onerror="this.remove(); this.parentElement.textContent='C';"
                     >
@@ -437,7 +409,7 @@
                 </div>
 
 
-          
+                
 
                 <address>
 
@@ -459,8 +431,6 @@
             </aside>
 
 
-            
-
             <h1>
                 <b>Cayden J. Osborne</b>
             </h1>
@@ -481,14 +451,12 @@
 
             <p class="links">
 
-    
                 <a href="CV.pdf" target="_blank">
                     CV
                 </a>
 
                 <span>|</span>
 
-   
                 <a
                     href="https://www.linkedin.com/in/cjosborne7/"
                     target="_blank"
@@ -497,7 +465,6 @@
                 </a>
 
                 <span>|</span>
-
 
                 <a
                     href="https://github.com/caydenosb"
@@ -509,10 +476,9 @@
             </p>
 
 
-   
+      
 
             <p>
-
                 Welcome! I am currently a mathematics student at
 
                 <a
@@ -525,8 +491,8 @@
                 pursuing a combined B.S./M.A. in Mathematics,
                 with an expected completion of May 2027.
 
-                I am currently working on my master's thesis and independent study
-                under the supervision of
+                I am currently working on my master's thesis
+                and independent study under the supervision of
 
                 <a
                     href="https://zaremsky.github.io/index.html"
@@ -538,11 +504,9 @@
                 The aim of my thesis is to present an
                 exposition of a modern proof that Thompson's
                 group \(V\) is of type \(F_\infty\).
-
             </p>
 
 
-          
 
             <p>
                 My research interests currently lie in:
@@ -569,65 +533,69 @@
             </ol>
 
 
-         
 
             <p>
-                Currently, the topic of category theory has caught my eye...Outside of math, I like hiking,
+                Currently, the topic of category theory
+                has caught my eye.
+
+                Outside of math, I like hiking,
                 spending time in nature, and
                 listening to music.
             </p>
 
-        </section>
-
-<!-- ======================================
-     MATHEMATICAL INTERESTS AND DIAGRAMS
-     ====================================== -->
-
-<h2>Mathematical Interests</h2>
-
-<p>
-    Below are two mathematical diagrams reflecting
-    areas of mathematics that interest me:
-    geometric group theory and category theory.
-</p>
-
-<div class="math-gallery">
 
 
-    <figure class="math-figure">
+            <h2>Mathematical Interests</h2>
 
-        <img
-            src="ThompTree.png"
-            alt="Tree diagram representing an element of Thompson's group V"
-            loading="lazy"
-        >
-
-        <figcaption>
-            A tree diagram representing an element
-            of Thompson's group \(V\).
-        </figcaption>
-
-    </figure>
+            <p>
+                Below are two mathematical diagrams reflecting
+                areas of mathematics that interest me:
+                geometric group theory and category theory.
+            </p>
 
 
-   
-    <figure class="math-figure">
 
-        <img
-            src="CDiagram.png"
-            alt=""
-            loading="lazy"
-        >
+            <div class="math-gallery">
 
-        <figcaption>
-            A commutative diagram illustrating
-            a categorical relationship.
-        </figcaption>
+              
 
-    </figure>
+                <figure class="math-figure">
 
-</div>
+                    <img
+                        src="ThompTree.png"
+                        alt="Tree diagram representing an element of Thompson's group V"
+                        loading="lazy"
+                    >
+
+                    <figcaption>
+                        A tree diagram representing an element
+                        of Thompson's group \(V\).
+                    </figcaption>
+
+                </figure>
+
+
     
+
+                <figure class="math-figure">
+
+                    <img
+                        src="CDiagram.png"
+                        alt="Commutative diagram from category theory"
+                        loading="lazy"
+                    >
+
+                    <figcaption>
+                        A diagram illustrating
+                        a categorical relationship.
+                    </figcaption>
+
+                </figure>
+
+            </div>
+
+        </section>
+      
 
         <section id="research" hidden>
 
@@ -638,12 +606,13 @@
             </p>
 
 
+
             <div class="year">
                 2026–2027
             </div>
 
 
- 
+         
 
             <div class="pub">
 
@@ -661,57 +630,52 @@
                 </div>
 
                 <p>
-
                     I am studying the finiteness properties
                     of Thompson's group \(V\), with the
                     goal of presenting a modern proof that
                     the group is of type \(F_\infty\).
-
                 </p>
 
+            </div>
+
+
+
+            <div class="pub">
+
+                <div class="t">
+                    The Survey of Atmospheric Neutrinos
+                </div>
+
+                <div class="a">
+                    Undergraduate Physics Final Project | Spring 2026
+                </div>
+
+                <p>
+                    A survey of atmospheric neutrinos,
+                    including their properties, detection
+                    methods, and the experiments used to
+                    study them.
+
+                    The project also discusses applications
+                    and future directions in neutrino research.
+                </p>
+
+                <a
+                    class="btn"
+                    href="ANeutrinos.pdf"
+                    target="_blank">
+                    PDF
+                </a>
 
             </div>
-          <div class="pub">
 
-   
-    <div class="t">
-        The Survey of Atmospheric Neutrinos
-    </div>
-
-
-    <div class="a">
-        Undergraduate Physics Final Project | Spring 2026
-    </div>
-
-
-    <p>
-        A survey of atmospheric neutrinos, including
-        their properties, detection methods, and
-        the experiments used to study them.
-        The project also discusses applications
-        and future directions in neutrino research.
-    </p>
-
-    
-    <a
-        class="btn"
-        href="ANeutrinos.pdf"
-        target="_blank">
-        PDF
-    </a>
-
-</div>
-
-
-            
 
             <div class="year">
                 2025
             </div>
 
 
-      
-
+           
             <div class="pub">
 
                 <div class="t">
@@ -724,14 +688,10 @@
                 </div>
 
                 <p>
-
                     Applied the divergence theorem to
                     establish Newton's shell theorem
                     and investigate gravitational fields.
-
                 </p>
-
-          
 
                 <a
                     class="btn"
@@ -743,27 +703,26 @@
             </div>
 
         </section>
+        
 
     </main>
 
 
-   
+  
 
     <footer>
-
         <div class="wrap">
             © 2026 Cayden Osborne.
         </div>
-
     </footer>
 
 
-
+ 
     <script>
 
         (function () {
 
-        
+            
 
             var root = document.documentElement;
             var btn = document.getElementById('theme');
@@ -778,7 +737,7 @@
             }
 
 
-
+ 
 
             try {
 
@@ -794,7 +753,6 @@
 
 
         
-
             btn.addEventListener('click', function () {
 
                 var n =
@@ -813,8 +771,6 @@
             });
 
 
-
-
             var tabs = document.querySelectorAll('.tab');
 
             function show() {
@@ -831,7 +787,7 @@
                     p !== 'research';
 
 
-       
+         
 
                 tabs.forEach(function (t) {
 
@@ -853,7 +809,6 @@
                 window.scrollTo(0, 0);
 
             }
-
 
             addEventListener('hashchange', show);
 
